@@ -12,6 +12,8 @@ public class AdmineServiceImpl implements AdmineService {
     @Override
     public void saveAdmin(Admin admin) {
         adminMapper.insert(admin);
+
+
     }
 }
 

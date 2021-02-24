@@ -4,4 +4,5 @@ import com.zhang.atcrowdfunding.entity.Admin;
 
 public interface AdmineService {
     void saveAdmin(Admin admin);
+
 }

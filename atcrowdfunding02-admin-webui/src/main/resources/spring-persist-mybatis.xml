@@ -14,7 +14,7 @@
     <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sessionFactory">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
-        <property name="mapperLocations" value="mybatis/mapper/*Mapper.xml"/>
+        <property name="mapperLocations" value="classpath:mybatis/mapper/*Mapper.xml"/>
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" id="mapperScannerConfigurer">
         <property name="basePackage" value="com.zhang.atcrowdfunding.mapper"/>

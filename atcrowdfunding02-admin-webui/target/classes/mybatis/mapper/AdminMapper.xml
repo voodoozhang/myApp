@@ -69,7 +69,7 @@
   <sql id="Base_Column_List" >
     id, login_acct, user_pswd, email, creat_time
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.zhang.AdminExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.zhang.atcrowdfunding.entity.AdminExample" >
     select
     <if test="distinct" >
       distinct
@@ -93,19 +93,19 @@
     delete from t_admin
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.zhang.AdminExample" >
+  <delete id="deleteByExample" parameterType="com.zhang.atcrowdfunding.entity.AdminExample" >
     delete from t_admin
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.zhang.Admin" >
+  <insert id="insert" parameterType="com.zhang.atcrowdfunding.entity.Admin" >
     insert into t_admin (id, login_acct, user_pswd,
                          email, creat_time)
     values (#{id,jdbcType=INTEGER}, #{loginAcct,jdbcType=VARCHAR}, #{userPswd,jdbcType=CHAR},
             #{email,jdbcType=VARCHAR}, #{creatTime,jdbcType=CHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.zhang.Admin" >
+  <insert id="insertSelective" parameterType="com.zhang.atcrowdfunding.entity.Admin" >
     insert into t_admin
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -142,7 +142,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.zhang.AdminExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.zhang.atcrowdfunding.entity.AdminExample" resultType="java.lang.Integer" >
     select count(*) from t_admin
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -182,7 +182,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zhang.Admin" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.zhang.atcrowdfunding.entity.Admin" >
     update t_admin
     <set >
       <if test="loginAcct != null" >
@@ -200,7 +200,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.zhang.Admin" >
+  <update id="updateByPrimaryKey" parameterType="com.zhang.atcrowdfunding.entity.Admin" >
     update t_admin
     set login_acct = #{loginAcct,jdbcType=VARCHAR},
         user_pswd = #{userPswd,jdbcType=CHAR},
